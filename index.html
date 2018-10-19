@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>万圣节抽符</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<!--<script type="text/javascript">
+			
+			var now=new Date();
+			var hour=now.getHours();
+			if(hour<12){
+			document.write("上午好")
+			};
+			else{
+				document.write("下午好")
+			}
+		</script>-->
+		<script type="text/javascript">
+			function showpage(a){
+				document.getElementById("page1").style.display="none";
+				document.getElementById("page2").style.display="none";
+				document.getElementById("page3").style.display="none";
+				document.getElementById("page4").style.display="none";
+				if(a == 2){
+				document.getElementById("page2").style.display="block";	
+				}
+				else if (a == 3){
+				document.getElementById("page3").style.display="block";	
+				}
+				else if (a == 4){
+				document.getElementById("page4").style.display="block";	
+				}}
+				/*//隐藏page1
+				document.getElementById("page1").style.display="none";
+				//显示page2
+				document.getElementById("page2").style.display="block";
+			}
+			function showpage3(){
+				//隐藏page2
+				document.getElementById("page2").style.display="none";
+				//显示page3
+				document.getElementById("page3").style.display="block";
+				
+			}
+			function showpage4(){
+				document.getElementById("page3").style.display="none";
+				document.getElementById("page4").style.display="block";
+				
+			}*/
+			function showcharm(b){
+				/*隐藏第三页，显示第四页，根据b换图*      ../表示到上级目录寻找文件*/
+				/*document.getElementById("page3").style.display="none";
+				document.getElementById("page4").style.display="block";	*/
+				showpage(4);
+				if(b==1){
+					document.getElementById("page4").style.backgroundImage="url(img/charm1.jpg)";
+				}
+				else if(b==2){
+					document.getElementById("page4").style.backgroundImage="url(img/charm2.jpg)";
+				}
+				else if(b==3){
+					document.getElementById("page4").style.backgroundImage="url(img/charm3.jpg)";
+				}
+				else if(b==4){
+					document.getElementById("page4").style.backgroundImage="url(img/charm4.jpg)";
+				}
+				else if(b==5){
+					document.getElementById("page4").style.backgroundImage="url(img/charm5.jpg)";
+				}
+				else if(b==6){
+					document.getElementById("page4").style.backgroundImage="url(img/charm6.jpg)";
+				}
+				else if(b==7){
+					document.getElementById("page4").style.backgroundImage="url(img/charm7.jpg)";
+				}
+			}
+				
+		</script>
+
+	</head>
+	<body>
+		<div id="page1" class="bgimg">
+			<img id="tittle" src="img/title.png" />
+			<img id="box" src="img/box.png" onclick="showpage(2)"/>
+		</div>
+		<div id="page2" class="bgimg">
+			<img  id="StarGame" src="img/startGame.jpg" onclick="showpage(3)" />
+			<img id="pumpkin"  src="img/pumpkin.png" />
+		</div>
+		<div id="page3" class="bgimg">
+			<img id="charm01" src="img/1.png" onclick="showcharm(1)"/>
+			<img id="charm02" src="img/2.png" onclick="showcharm(2)"/>
+			<img id="charm03" src="img/3.png" onclick="showcharm(3)"/>
+			<img id="charm04" src="img/4.png" onclick="showcharm(4)"/>
+			<img id="charm05" src="img/5.png" onclick="showcharm(5)"/>
+			<img id="charm06" src="img/6.png" onclick="showcharm(6)"/>
+			<img id="charm07" src="img/7.png" onclick="showcharm(7)"/>
+		</div>
+		<div id="page4" class="bgimg">
+			<img src="img/back.png" id="back" onclick="showpage(3)">
+			
+		</div>	
+		<audio src="audio/AKB48.mp3" autoplay="autoplay"></audio>
+	</body>
+</html>
